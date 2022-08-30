@@ -14,12 +14,15 @@ class Promise {
     const resolve = (val) => {
       // 一些校验
       // 1不能是自己
+      if (val === this) {
+        return;
+      }
       // 2是其他promise
       if (val instanceof Promise) {
         val.then(resolve, reject);
         return;
       }
-      // 3是对象或者function
+      // 3是对象或者function **难点
 
       if (this.status === PENDDING) {
         this.status = FULL;
