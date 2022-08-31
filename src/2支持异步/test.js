@@ -1,4 +1,4 @@
-const promise1 = require("./promise.js"); // 不支持异步
+const promise1 = require("./promise.js");
 new promise1((resolve, reject) => {
   setTimeout(() => {
     resolve(1);

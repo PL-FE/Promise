@@ -1,4 +1,4 @@
-const promise = require("./promise.js"); // 不支持异步
+const promise = require("./promise.js");
 new promise((resolve, reject) => {
   JSON.parse("{sds}");
   setTimeout(() => {
